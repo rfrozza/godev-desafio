@@ -9,8 +9,13 @@
 1. Arquivo **godev-desafio.sql** possui as tabelas necessárias para rodar a aplicação;
 
 - Tabela ```users``` possui apenas um usuário (já incluído no SQL), sendo usado para logar no sistema;
+- login: admin@godev.com
+- senha: admin
+
 2. Caso queira alterar a ```URL_BASE```, a mesma se encontra no arquivo **public/index.php**;
+
 3. Arquivo em **/App/core/Model.php** possui as configurações de conexão ao banco de dados;
+
 4. Recomendo utilizar o próprio PHP para inicializar o **Web Server**;
 - Utilizar o comando abaixo estando na pasta **godev-desafio/public**
 - Comando: ```php -S localhost:80```
