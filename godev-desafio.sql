@@ -28,6 +28,44 @@ CREATE TABLE IF NOT EXISTS `alunos` (
 /*!40000 ALTER TABLE `alunos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `alunos` ENABLE KEYS */;
 
+-- Copiando estrutura para tabela godev.users
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL,
+  `senha` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- Copiando dados para a tabela godev.users: ~0 rows (aproximadamente)
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` (`id`, `email`, `senha`) VALUES
+	(1, 'admin@godev.com', '$2y$10$r1hU/HjoMPxKCnGydJHPDeJxfA2ERFRrMle8nNR8.F9ssTsUeivXC');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela godev.salas_aula
+CREATE TABLE IF NOT EXISTS `salas_aula` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `lotacao` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+-- Copiando dados para a tabela godev.salas_aula: ~3 rows (aproximadamente)
+/*!40000 ALTER TABLE `salas_aula` DISABLE KEYS */;
+/*!40000 ALTER TABLE `salas_aula` ENABLE KEYS */;
+
+-- Copiando estrutura para tabela godev.salas_cafe
+CREATE TABLE IF NOT EXISTS `salas_cafe` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL DEFAULT '',
+  `lotacao` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+-- Copiando dados para a tabela godev.salas_cafe: ~3 rows (aproximadamente)
+/*!40000 ALTER TABLE `salas_cafe` DISABLE KEYS */;
+/*!40000 ALTER TABLE `salas_cafe` ENABLE KEYS */;
+
 -- Copiando estrutura para tabela godev.coffee_aluno
 CREATE TABLE IF NOT EXISTS `coffee_aluno` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -61,44 +99,6 @@ CREATE TABLE IF NOT EXISTS `matricula_aluno` (
 -- Copiando dados para a tabela godev.matricula_aluno: ~0 rows (aproximadamente)
 /*!40000 ALTER TABLE `matricula_aluno` DISABLE KEYS */;
 /*!40000 ALTER TABLE `matricula_aluno` ENABLE KEYS */;
-
--- Copiando estrutura para tabela godev.salas_aula
-CREATE TABLE IF NOT EXISTS `salas_aula` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) NOT NULL,
-  `lotacao` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
-
--- Copiando dados para a tabela godev.salas_aula: ~3 rows (aproximadamente)
-/*!40000 ALTER TABLE `salas_aula` DISABLE KEYS */;
-/*!40000 ALTER TABLE `salas_aula` ENABLE KEYS */;
-
--- Copiando estrutura para tabela godev.salas_cafe
-CREATE TABLE IF NOT EXISTS `salas_cafe` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(100) NOT NULL DEFAULT '',
-  `lotacao` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
-
--- Copiando dados para a tabela godev.salas_cafe: ~3 rows (aproximadamente)
-/*!40000 ALTER TABLE `salas_cafe` DISABLE KEYS */;
-/*!40000 ALTER TABLE `salas_cafe` ENABLE KEYS */;
-
--- Copiando estrutura para tabela godev.users
-CREATE TABLE IF NOT EXISTS `users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `email` varchar(50) NOT NULL,
-  `senha` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
-
--- Copiando dados para a tabela godev.users: ~0 rows (aproximadamente)
-/*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` (`id`, `email`, `senha`) VALUES
-	(1, 'admin@godev.com', '$2y$10$r1hU/HjoMPxKCnGydJHPDeJxfA2ERFRrMle8nNR8.F9ssTsUeivXC');
-/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
